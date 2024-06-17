@@ -59,6 +59,8 @@ This repository contains a simple Python script that demonstrates how to capture
         # Call the main function with the specified interface
         main(sys.argv[1])
     ```
+    ![Demo](https://github.com/Winnielegal/CodeAlpha_Basic_Network_Sniffer/blob/main/1.png)
+
 6. **Run the Sniffer:** Open a terminal, navigate to your directory, and run the following command (replace `eth0` with your network interface name):
     ```sh
     sudo python sniffer.py eth0
@@ -67,6 +69,23 @@ This repository contains a simple Python script that demonstrates how to capture
     ```sh
     ifconfig
     ```
+
+    ## Testing with Network Activity
+
+1. *Generate Network Traffic:* While your sniffer is running, open another terminal and try a few things:
+   * ping google.com
+   * curl google.com
+   * Open a web browser and visit a website.
+2. *Observe Results:*  You should see the TCP connections for those activities printed in your sniffer terminal.
+
+## Extending the Sniffer
+
+* *Capture Other Protocols:* Modify the filter argument in the sniff function to capture other protocols (e.g., UDP, ICMP, DNS).
+* *Log to a File:*  Save captured packets to a log file for later analysis.
+* *Extract More Information:*  Add code to extract additional details from packets, such as timestamps, payload data, or protocol-specific information.
+
+![Demo](https://github.com/Winnielegal/CodeAlpha_Basic_Network_Sniffer/blob/main/2.png)
+
 
 ## Additional Information:
 
